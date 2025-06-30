@@ -13,7 +13,7 @@ function checkAnswer(puzzle) {
             correctAnswer = 'help';
             break;
         case 'puzzle3':
-            correctAnswer = '2';
+            correctAnswer = 'm';
             break;
         case 'puzzle4':
             correctAnswer = '123';
@@ -26,8 +26,8 @@ function checkAnswer(puzzle) {
     }
 
     if (userInput === correctAnswer) {
-        result.innerHTML = '✅ Correct! Moving to next room...';
-        feedbackImage.src = 'images/correct.png';
+        result.innerHTML = '✅ Correct! Door opening...';
+        feedbackImage.src = 'images/open.png';
         setTimeout(() => {
             if (puzzle === 'puzzle5') {
                 window.location.href = 'index.html';
@@ -37,7 +37,7 @@ function checkAnswer(puzzle) {
             }
         }, 1500);
     } else {
-        result.innerHTML = '❌ Incorrect! Try again.';
-        feedbackImage.src = 'images/wrong.png';
+        result.innerHTML = '❌ Incorrect! The door stays locked.';
+        feedbackImage.src = 'images/lock.png';
     }
 }
