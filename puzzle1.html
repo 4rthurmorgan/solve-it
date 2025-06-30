@@ -3,20 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Puzzle Room 1</title>
+    <title>Puzzle 1</title>
     <link rel="stylesheet" href="css/style.css">
-    <script defer src="js/script.js"></script>
 </head>
 <body>
-    <div class="container">
-        <h1>Room 1: The Number Gate</h1>
-        <img src="images/lock.gif" class="icon">
-        <p>Sequence: <strong>3, 9, 27, 81, ?</strong></p>
-        <p>Enter the next number to unlock:</p>
-        <input type="text" id="answer" placeholder="Your answer">
-        <button onclick="checkAnswer('puzzle1')">Submit</button>
-        <p id="result"></p>
-        <img id="feedbackImage" src="" class="feedback-image">
-    </div>
+
+    <h1>🔒 Puzzle 1</h1>
+    <p>Solve this to open the door and move forward:</p>
+
+    <p><strong>What is (81 ÷ 3) × (9 ÷ 1)?</strong></p>
+
+    <input type="text" id="answer" placeholder="Enter your answer">
+    <button onclick="checkAnswer('puzzle1')">Check</button>
+
+    <p id="result"></p>
+
+    <img id="feedbackImage" src="images/lock.png" alt="Status" width="200px">
+
+    <script src="js/script.js" defer></script>
+
 </body>
 </html>
