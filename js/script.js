@@ -1,43 +1,40 @@
+// ✅ Puzzle answers stored in one place
+const answers = {
+    puzzle1: "243",
+    puzzle2: "help",
+    puzzle3: "m",
+    puzzle4: "123",
+    puzzle5: "done"
+};
+
 function checkAnswer(puzzle) {
-    const userInput = document.getElementById('answer').value.trim().toLowerCase();
+    const input = document.getElementById('answer').value.trim().toLowerCase();
     const result = document.getElementById('result');
     const feedbackImage = document.getElementById('feedbackImage');
 
-    let correctAnswer = '';
+    const correctAnswer = answers[puzzle];
 
-    switch (puzzle) {
-        case 'puzzle1':
-            correctAnswer = '243';
-            break;
-        case 'puzzle2':
-            correctAnswer = 'help';
-            break;
-        case 'puzzle3':
-            correctAnswer = 'm';
-            break;
-        case 'puzzle4':
-            correctAnswer = '123';
-            break;
-        case 'puzzle5':
-            correctAnswer = 'done';
-            break;
-        default:
-            correctAnswer = '';
+    if (!correctAnswer) {
+        result.innerHTML = "⚠️ Error: Puzzle not found.";
+        return;
     }
 
-    if (userInput === correctAnswer) {
-        result.innerHTML = '✅ Correct! Door opening...';
-        feedbackImage.src = 'images/open.png';
+    if (input === correctAnswer) {
+        // ✅ Correct answer logic
+        result.innerHTML = "✅ Correct! Door opening...";
+        feedbackImage.src = "images/open.png";
+
         setTimeout(() => {
-            if (puzzle === 'puzzle5') {
-                window.location.href = 'index.html';
+            if (puzzle === "puzzle5") {
+                window.location.href = "index.html"; // End of game
             } else {
-                const nextPuzzle = 'puzzle' + (parseInt(puzzle.slice(-1)) + 1) + '.html';
-                window.location.href = nextPuzzle;
+                const nextNumber = parseInt(puzzle.replace("puzzle", "")) + 1;
+                window.location.href = `puzzle${nextNumber}.html`;
             }
         }, 1500);
     } else {
-        result.innerHTML = '❌ Incorrect! The door stays locked.';
-        feedbackImage.src = 'images/lock.png';
+        // ❌ Wrong answer logic
+        result.innerHTML = "❌ Incorrect! The door stays locked.";
+        feedbackImage.src = "images/lock.png";
     }
 }
