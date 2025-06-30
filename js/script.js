@@ -1,4 +1,3 @@
-// ✅ Puzzle answers stored in one place
 const answers = {
     puzzle1: "243",
     puzzle2: "help",
@@ -10,7 +9,7 @@ const answers = {
 function checkAnswer(puzzle) {
     const input = document.getElementById('answer').value.trim().toLowerCase();
     const result = document.getElementById('result');
-    const feedbackImage = document.getElementById('feedbackImage');
+    const doorStatus = document.getElementById('doorStatus');
 
     const correctAnswer = answers[puzzle];
 
@@ -20,21 +19,21 @@ function checkAnswer(puzzle) {
     }
 
     if (input === correctAnswer) {
-        // ✅ Correct answer logic
-        result.innerHTML = "✅ Correct! Door opening...";
-        feedbackImage.src = "images/open.png";
+        result.innerHTML = "✅ Correct! The door is opening...";
+        doorStatus.innerHTML = "🚪 The door is open!";
+        doorStatus.style.color = "lightgreen";
 
         setTimeout(() => {
             if (puzzle === "puzzle5") {
-                window.location.href = "index.html"; // End of game
+                window.location.href = "index.html";
             } else {
                 const nextNumber = parseInt(puzzle.replace("puzzle", "")) + 1;
                 window.location.href = `puzzle${nextNumber}.html`;
             }
         }, 1500);
     } else {
-        // ❌ Wrong answer logic
         result.innerHTML = "❌ Incorrect! The door stays locked.";
-        feedbackImage.src = "images/lock.png";
+        doorStatus.innerHTML = "🔒 The door is locked!";
+        doorStatus.style.color = "red";
     }
 }
