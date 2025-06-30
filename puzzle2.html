@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Puzzle Room 2</title>
+    <title>Puzzle 2</title>
     <link rel="stylesheet" href="css/style.css">
-    <script defer src="js/script.js"></script>
 </head>
 <body>
-    <div class="container">
-        <h1>Room 2: The Cipher Door</h1>
-        <img src="images/lock.gif" class="icon">
-        <p>Decode this:</p>
-        <p><strong>8 – 5 – 12 – 16</strong></p>
-        <p>Hint: A=1, B=2, C=3...</p>
-        <p>Enter the word to unlock:</p>
-        <input type="text" id="answer" placeholder="Your answer">
-        <button onclick="checkAnswer('puzzle2')">Submit</button>
-        <p id="result"></p>
-        <img id="feedbackImage" src="" class="feedback-image">
-    </div>
+
+    <h1>🔒 Puzzle 2</h1>
+    <p>Help me, I am a five-letter word. Remove my first letter, I become a place. Remove the first two, I become a behavior. What am I?</p>
+
+    <input type="text" id="answer" placeholder="Enter your answer">
+    <button onclick="checkAnswer('puzzle2')">Check</button>
+
+    <p id="result"></p>
+
+    <img id="feedbackImage" src="images/lock.png" alt="Status" width="200px">
+
+    <script src="js/script.js" defer></script>
+
 </body>
 </html>
