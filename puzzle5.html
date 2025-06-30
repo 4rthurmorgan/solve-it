@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Puzzle</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Room 5: The Final Switches</h1>
+        <img src="images/lock.gif" class="icon">
+        <p>There are <strong>3 switches</strong> in a room.</p>
+        <p>Only one turns on the bulb in the next room.</p>
+        <p>You can flip the switches however you like, but</p>
+        <p><strong>you may enter the bulb room only once.</strong></p>
+        <p>Type <strong>done</strong> once you've figured out the solution.</p>
+        <input type="text" id="answer" placeholder="Type 'done'">
+        <button onclick="checkAnswer('puzzle5')">Submit</button>
+        <p id="result"></p>
+        <img id="feedbackImage" src="" class="feedback-image">
+    </div>
+</body>
+</html>
