@@ -2,23 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Puzzle 4</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
 </head>
 <body>
+    <div class="container">
+        <h1>Puzzle 4</h1>
+        <h2 id="doorStatus">🔒 The door is locked!</h2>
+        <p>If you write numbers from 1 to 100, how many times does the digit 1 appear?</p>
 
-    <h1>🔒 Puzzle 4</h1>
-    <p>I am a three-digit number. My tens digit is five more than my ones digit. My hundreds digit is eight less than my tens digit. What am I?</p>
+        <input type="text" id="answer" placeholder="Enter your answer">
+        <div class="buttons">
+            <button onclick="checkAnswer('puzzle4')">✅ Submit</button>
+            <button onclick="window.location.href='index.html'">🏠 Home</button>
+        </div>
 
-    <input type="text" id="answer" placeholder="Enter your answer">
-    <button onclick="checkAnswer('puzzle4')">Check</button>
-
-    <p id="result"></p>
-
-    <img id="feedbackImage" src="images/lock.png" alt="Status" width="200px">
-
-    <script src="js/script.js" defer></script>
-
+        <p id="result"></p>
+    </div>
 </body>
 </html>
