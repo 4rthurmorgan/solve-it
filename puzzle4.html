@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle Room 4</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Room 4: The Code Safe</h1>
+        <img src="images/lock.gif" class="icon">
+        <p>The code is a 3-digit number.</p>
+        <p>- The digits add up to 6.</p>
+        <p>- The second digit is twice the first.</p>
+        <p>- The third digit is the first digit plus 3.</p>
+        <p>What is the code?</p>
+        <input type="text" id="answer" placeholder="Your answer">
+        <button onclick="checkAnswer('puzzle4')">Submit</button>
+        <p id="result"></p>
+        <img id="feedbackImage" src="" class="feedback-image">
+    </div>
+</body>
+</html>
