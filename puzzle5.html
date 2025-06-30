@@ -2,23 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Puzzle 5</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
 </head>
 <body>
+    <div class="container">
+        <h1>Puzzle 5</h1>
+        <h2 id="doorStatus">🔒 The door is locked!</h2>
+        <p>Type the word that describes when all puzzles are completed successfully.</p>
 
-    <h1>🔒 Puzzle 5 - Final</h1>
-    <p>Type the word that means 'Finished'.</p>
+        <input type="text" id="answer" placeholder="Enter your answer">
+        <div class="buttons">
+            <button onclick="checkAnswer('puzzle5')">✅ Submit</button>
+            <button onclick="window.location.href='index.html'">🏠 Home</button>
+        </div>
 
-    <input type="text" id="answer" placeholder="Enter your answer">
-    <button onclick="checkAnswer('puzzle5')">Check</button>
-
-    <p id="result"></p>
-
-    <img id="feedbackImage" src="images/lock.png" alt="Status" width="200px">
-
-    <script src="js/script.js" defer></script>
-
+        <p id="result"></p>
+    </div>
 </body>
 </html>
